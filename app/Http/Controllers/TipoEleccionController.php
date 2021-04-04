@@ -6,7 +6,7 @@ use App\TipoEleccion;
 
 use Illuminate\Http\Request;
 
-class EleccionesController extends Controller
+class TipoEleccionController extends Controller
 {
     /**
      * Create a new controller instance.

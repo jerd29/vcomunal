@@ -23,7 +23,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/nhome', 'HomeController@index')->name('nhome');
 
-Route::get('/elecciones', 'EleccionesController@index')->name('tipo_eleccion.index');
+Route::get('/tipoeleccion', 'TipoEleccionController@index')->name('tipo_eleccion.index');
+Route::get('/elecciones', 'EleccionController@index')->name('eleccion.index');
+
 
 // Route::get('/nhome', function () {
 //     return view('nhome');

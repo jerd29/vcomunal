@@ -21,7 +21,7 @@ class CreateEleccionTable extends Migration
 
             $table->date('fecha_eleccion');
 
-            $table->integer('status_eleccion');
+            $table->boolean('status_eleccion');
 
             $table->timestamps();
         });

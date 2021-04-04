@@ -23,6 +23,20 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
 </head>
     <style>
+        .dropdown-menu {
+            background-color: #3c415c;
+        }
+
+        .dropdown-item{
+            color: white;
+        }
+
+        .dropdown-menu > .dropdown-item:hover{
+        /*Modifica lo que quieras*/
+        background:rgb(105, 45, 5);
+        color:white;
+        }
+
 
          .cintillo {
 
@@ -102,9 +116,18 @@
                 <nav class="navbar navbar-expand navbar-dark bg-dark px-0 px-lg-2">
                     <div class="collapse navbar-collapse" id="nav">
                         <ul class="flex-column flex-lg-row navbar-nav w-100 justify-content-center align-items-center align-items-sm-start text-left text-lg-center">
-                            <li class="nav-item w-100">
-                                <a class="nav-link active text-nowrap" href="{{ route('tipo_eleccion.index')}} "><i class="fa fa-bullseye fa-fw"></i> <span class="d-none d-sm-inline font-weight-bold">Elecciones</span></a>
+
+                            <li class="nav-item dropdown active w-100 text-nowrap">
+                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-bullseye fa-fw"></i><span class="d-none d-sm-inline font-weight-bold">Elecciones</span></a>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                  <a class="dropdown-item" href="{{ route('tipo_eleccion.index')}}"><span class="d-none d-sm-inline font-weight-bold">Tipos de Eleccion</span></a>
+                                  <a class="dropdown-item" href="{{ route('eleccion.index')}}"><span class="d-none d-sm-inline font-weight-bold">Elecciones</span></a>
+                                  <a class="dropdown-item" href="#">Something else here</a>
+                                  <div class="dropdown-divider"></div>
+                                  <a class="dropdown-item" href="#">Separated link</a>
+                                </div>
                             </li>
+                            
                             <li class="nav-item w-100">
                                 <a class="nav-link text-truncate" href="#spy0"><i class="fa fa-heart-o fa-fw"></i> <span class="d-none d-sm-inline">Link</span></a>
                             </li>
