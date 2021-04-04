@@ -127,10 +127,34 @@
                                   <a class="dropdown-item" href="#">Separated link</a>
                                 </div>
                             </li>
-                            
-                            <li class="nav-item w-100">
-                                <a class="nav-link text-truncate" href="#spy0"><i class="fa fa-heart-o fa-fw"></i> <span class="d-none d-sm-inline">Link</span></a>
+
+                            <li class="nav-item dropdown active w-100 text-nowrap">
+                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-file" aria-hidden="true"></i><span class="d-none d-sm-inline font-weight-bold"> Reportes</span></a>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                  <a class="dropdown-item" href="{{ route('reportes.tnacional')}}"><span class="d-none d-sm-inline font-weight-bold">Total nacional</span></a>
+                                  {{-- <a class="dropdown-item" href="{{ route('eleccion.index')}}"><span class="d-none d-sm-inline font-weight-bold">Elecciones</span></a> --}}
+                                  <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
                             </li>
+
+                            <li class="nav-item dropdown active w-100 text-nowrap">
+                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-chart-line"></i><span class="d-none d-sm-inline font-weight-bold"> Graficas</span></a>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                  <a class="dropdown-item" href="##"><span class="d-none d-sm-inline font-weight-bold">Grafica Tiempo</span></a>
+                                  {{-- <a class="dropdown-item" href="{{ route('eleccion.index')}}"><span class="d-none d-sm-inline font-weight-bold">Elecciones</span></a> --}}
+                                  <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </li>
+
+                            <li class="nav-item dropdown active w-100 text-nowrap">
+                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-users"></i><span class="d-none d-sm-inline font-weight-bold"> Usuarios</span></a>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                  <a class="dropdown-item" href="##"><span class="d-none d-sm-inline font-weight-bold">Grafica Tiempo</span></a>
+                                  {{-- <a class="dropdown-item" href="{{ route('eleccion.index')}}"><span class="d-none d-sm-inline font-weight-bold">Elecciones</span></a> --}}
+                                  <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </li>
+
                             <li class="nav-item w-100">
                                 <a class="nav-link text-truncate" href="#spy1"><i class="fa fa-book fa-fw"></i> <span class="d-none d-sm-inline">Link 1</span></a>
                             </li>
