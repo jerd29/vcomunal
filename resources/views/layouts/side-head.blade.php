@@ -149,7 +149,7 @@
                             <li class="nav-item dropdown active w-100 text-nowrap">
                                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-users"></i><span class="d-none d-sm-inline font-weight-bold"> Usuarios</span></a>
                                 <div class="dropdown-menu dropdown-menu-right">
-                                  <a class="dropdown-item" href="##"><span class="d-none d-sm-inline font-weight-bold">Grafica Tiempo</span></a>
+                                  <a class="dropdown-item" href="{{ route('usuarios.index') }}"><span class="d-none d-sm-inline font-weight-bold">Listado de Usuario</span></a>
                                   {{-- <a class="dropdown-item" href="{{ route('eleccion.index')}}"><span class="d-none d-sm-inline font-weight-bold">Elecciones</span></a> --}}
                                   <a class="dropdown-item" href="#">Something else here</a>
                                 </div>

@@ -10,7 +10,7 @@
 
     <div class="card justify-content-center" style="width:60%;margin: auto;">
         <div class="card-body">
-            <table class="table table-striped" id="tipo_eleccion">
+            <table class="table table-striped" id="votos_estado">
                 <thead>
                     <tr class="text-center">
                         <th>Estado</th>
@@ -44,7 +44,7 @@
         <script>
 
         $(document).ready(function() {
-            $('#tipo_eleccion').DataTable({
+            $('#votos_estado').DataTable({
                 responsive: true,
                 autoWidth: false,
                 language: {

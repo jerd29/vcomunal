@@ -26,7 +26,12 @@ Route::get('/nhome', 'HomeController@index')->name('nhome');
 Route::get('/tipoeleccion', 'TipoEleccionController@index')->name('tipo_eleccion.index');
 Route::get('/elecciones', 'EleccionController@index')->name('eleccion.index');
 
-Route::get('/registrovotos', 'RegistroVotoController@index')->name('reportes.tnacional');
+Route::get('/votosestados', 'RegistroVotoController@index')->name('reportes.tnacional');
+
+Route::get('/votosorg', 'RegistroVotoController@index')->name('reportes.tipoorg');
+
+Route::get('/usuarios', 'UsuarioController@index')->name('usuarios.index');
+
 
 
 
