@@ -11,7 +11,7 @@
     <div class="card justify-content-center" style="width:60%;margin: auto;">
         <div class="card-body">
             <ul class="list-group mb-4" style="list-style-type:none;">
-                <li><button class="btn btn-primary btn-sm"><i class="fas fa-plus"> Añadir un Tipo de Eleccion</i></button></li>
+                <li><button class="btn btn-primary btn-sm"  onclick="location.href='{{route('tipo_eleccion.create')}}'"><i class="fas fa-plus"> Añadir un Tipo de Eleccion</i></button></li>
             </ul>
             <table class="table table-striped" id="tipo_eleccion">
                 <thead>
@@ -29,8 +29,13 @@
                             <td>{{ $tipoeleccion->tipo_eleccion }}</td>
                             <td>
                                 {{-- <button class="btn btn-primary btn-sm"><i class="fas fa-plus"> </i></button> --}}
-                                <button class="btn btn-warning btn-sm"><i class="fas fa-edit"> Editar</i></button>
-                                <button class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"> Eliminar</i></button>
+                                <div class="row justify-content-center">
+                                <button class="btn btn-warning btn-sm mr-3" onclick="location.href='{{route('tipo_eleccion.edit', $tipoeleccion)}}'"><i class="fas fa-edit"> Editar</i></button>
+                                <form action="{{route('tipo_eleccion.destroy', $tipoeleccion)}}" method="post">
+                                    @csrf @method('DELETE')
+                                    <button class="btn btn-danger btn-sm "><i class="fas fa-trash-alt"> Eliminar</i></button>
+                                </form>
+                            </div>
                             </td>
                         </tr>
                         @empty

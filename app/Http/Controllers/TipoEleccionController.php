@@ -33,4 +33,53 @@ class TipoEleccionController extends Controller
 
         return view('tipo_eleccion.index', compact('tipoelecciones'));
     }
+
+    public function create()
+    {
+
+        // return dd(request());
+
+        return view('tipo_eleccion.create');
+
+        // $tipoelecciones = TipoEleccion::orderBy('pk_tipo_eleccion', 'ASC')->get();
+        // return view('tipo_eleccion.index', compact('tipoelecciones'));
+    }
+
+    public function store()
+    {
+        request()->validate([
+            'tipo_eleccion' => 'required|min:5'
+        ]);
+        TipoEleccion::create([
+            'tipo_eleccion' => request('tipo_eleccion')
+        ]);
+        
+        return redirect()->route('tipo_eleccion.index');
+    }
+
+    public function edit(TipoEleccion $tipoeleccion)
+    {
+
+        return view('tipo_eleccion.edit', [
+            'tipoeleccion' => $tipoeleccion
+        ]);
+    }
+
+    public function update(TipoEleccion $tipoeleccion)
+    {
+       $tipoeleccion->update([
+           'tipo_eleccion' => request('tipo_eleccion')
+       ]);
+       
+       return redirect()->route('tipo_eleccion.index');
+    }
+
+    public function destroy(TipoEleccion $tipoeleccion)
+    {
+
+       $tipoeleccion->delete();
+       
+       return redirect()->route('tipo_eleccion.index');
+    }
+
 }

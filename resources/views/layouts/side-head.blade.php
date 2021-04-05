@@ -67,21 +67,25 @@
 }
 
 .fondo {
-    background: url(../resources/img/MAPA-VNZLA.png)
+    
+    background: url(../resources/img/banner.jpg)
     no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: 70% 70%;
-  /* background-size: cover; */
-  overflow-x: hidden;
-  overflow-y: auto;
+    /* background: url(../resources/img/MAPA-VNZLA.png)
+    no-repeat center center fixed; */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: 80% 20%;
+    /* background-size: cover; */
+    overflow-x: hidden;
+    overflow-y: auto;
 
 }
 
 @media (max-width: 992px) {
     .h-md-100 {
         min-height: 100%;
+        min-width: 130px;
     }
 
     .img-cintillo {
@@ -101,10 +105,6 @@
     </style>
 <body>
 
-    {{-- <div class="fondo">
-        <img src="" alt="" srcset="">
-    </div> --}}
-
     
     <div class="container-fluid h-100 fondo">
         <div class="row d-flex flex-lg-column flex-row">
@@ -112,7 +112,7 @@
                 <img class="img-cintillo" src="../resources/img/cintillo-rec2.png" alt="" srcset="">
                 <h3 class="ocultar titulo-cintillo">Voto Comunal</h3>
             </div>
-            <aside class="col-2 col-lg-12 h-md-100 p-0 bg-dark">
+            <aside class="col-2 col-lg-12 h-md-100 p-0 bg-dark fixed-top">
                 <nav class="navbar navbar-expand navbar-dark bg-dark px-0 px-lg-2">
                     <div class="collapse navbar-collapse" id="nav">
                         <ul class="flex-column flex-lg-row navbar-nav w-100 justify-content-center align-items-center align-items-sm-start text-left text-lg-center">
@@ -158,15 +158,6 @@
                             <li class="nav-item w-100">
                                 <a class="nav-link text-truncate" href="#spy1"><i class="fa fa-book fa-fw"></i> <span class="d-none d-sm-inline">Link 1</span></a>
                             </li>
-                            {{-- <li class="nav-item w-100">
-                                <a class="nav-link text-truncate" href="#spy2"><i class="fa fa-heart fa-fw"></i> <span class="d-none d-sm-inline">Link 2</span></a>
-                            </li>
-                            <li class="nav-item w-100">
-                                <a class="nav-link text-truncate" href="#spy3"><i class="fa fa-star fa-fw"></i> <span class="d-none d-sm-inline">Link</span></a>
-                            </li> --}}
-                            {{-- <li class="nav-item w-100">
-                                <a class="nav-link text-truncate" data-target="#codeply" href="//codeply.com"><i class="fa fa-list fa-fw"></i> <span class="d-none d-sm-inline">Codeply</span></a>
-                            </li> --}}
 
                             @guest
                             <li class="nav-item w-100">

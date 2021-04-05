@@ -11,6 +11,8 @@ class TipoEleccion extends Model
     protected $table = 'tipo_eleccion';
     protected $primaryKey = 'pk_tipo_eleccion';
 
+    protected $fillable = ['tipo_eleccion'];
+
     public function eleccion()
     {
         return $this->hasMany(Eleccion::class, 'pk_eleccion');
